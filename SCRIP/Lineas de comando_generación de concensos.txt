@@ -1,0 +1,17 @@
+>Descomprimir archivos
+gunzip *gun
+
+>Concatenar en formato fastq
+cat *fastq > B01.fastq
+
+>Eliminar adaptadores
+porechop -i B01.fastq -o B01pore.fastq -t8 --dicard_middle 
+
+>Aplicar filtros de calidad 
+NanoFilt -q 10 -l 600 B01pore.fastq > B01nano.fastq 
+
+>Generar gráficos de calidad 
+NanoPlot -t 1 --fastq B01nano.fastq --maxlength 1000 --plot kde
+
+>Generación de una secuencia consenso
+NGSpeciesID --ont --q 10 --consensus --medaka --fastq B01pore.fastq --outfolder B01_COI --m 700 --s 100 --remove_universal_tail

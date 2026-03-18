@@ -1,0 +1,213 @@
+IQ-TREE 1.6.12 built Aug 15 2019
+
+Partition file name: PartitionFile.txt
+Input file name: MrBayes_codon.nex
+Type of analysis: ModelFinder + tree reconstruction
+Random seed number: 377368
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 55 taxa with 4 partitions and 1160 total sites (20.6946% missing data)
+
+  ID  Name  Type	Seq	Site	Unique	Infor	Invar	Const
+   1  16S   DNA	52	503	251	189	261	261
+   2  COI1  DNA	33	219	79	33	169	169
+   3  COI2  DNA	33	219	40	6	209	209
+   4  COI3  DNA	33	219	210	190	10	10
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TVM+F+I+G4:16S,TNe+I:COI1,F81+F+I:COI2,TIM2+F+G4:COI3
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TVM+F+I+G4       -5105.8507  10231.7015 + 0.0000  10232.1486 + 0.0000  10273.9074 + 0.0000
+   2  TNe+I             -822.9221   1653.8441 + 0.0000   1654.0310 + 0.0000   1667.4004 + 0.0000
+   3  F81+F+I           -396.7641    803.5283 + 0.0000    803.8099 + 0.0000    820.4736 + 0.0000
+   4  TIM2+F+G4        -3375.0956   6766.1912 + 0.0000   6766.8769 + 0.0000   6793.3037 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TVM+F+I+G4     0.5899  TVM{0.810681,7.41195,1.5468,0.0809793}+F{0.298058,0.115765,0.226223,0.359953}+I{0.408331}+G4{0.791339}
+   2  TNe+I          0.2440  TNe{2.38804,32.4353}+FQ+I{0.655889}
+   3  F81+F+I        0.0287  F81+I{0.915719}
+   4  TIM2+F+G4      3.6693  TIM2{0.359527,6.9628,3.55157}+F{0.404924,0.282256,0.0726159,0.240204}+G4{1.76588}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -9650.4679 (s.e. 317.6095)
+Unconstrained log-likelihood (without tree): -4549.0206
+Number of free parameters (#branches + #model parameters): 127
+Akaike information criterion (AIC) score: 19554.9357
+Corrected Akaike information criterion (AICc) score: 19586.4396
+Bayesian information criterion (BIC) score: 20197.0700
+
+Total tree length (sum of branch lengths): 5.4782
+Sum of internal branch lengths: 1.4673 (26.7849% of tree length)
+
+WARNING: 10 near-zero internal branches (<0.0009) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'M_sp_03_1002_' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / aBayes support
+
++**M_sp_03_1002_
+|
+|              +**M_sp_16_1015_
+|           +**| (0/0.333)
+|           |  |     +--M_sp_26_1025
+|           |  |  +**| (0/0.333)
+|           |  |  |  +--M_sp_24_1023_
+|           |  +**| (0/0.333)
+|           |     |  +--M_sp_35_1034
+|           |     +**| (0/0.333)
+|           |        +--M_sp_33_1032
+|        +**| (0/0.333)
+|        |  +**M_sp_13_1012
+|     +**| (0/0.333)
+|     |  |  +**M_sp_22_1021
+|     |  +**| (0/0.333)
+|     |     +**M_sp_05_1004_
+|  +**| (0/0.333)
+|  |  +**M_sp_23_1022_
++**| (0/0.333)
+|  +**M_sp_34_1033_
+|
+|  +--M_sp_08_1007_
++**| (0/0.333)
+   |  +--M_sp_27_1026_
+   +--| (98.4/1)
+      |        +---Macrobrachium_brasiliense_MN149322
+      |     +--| (98.5/1)
+      |     |  |              +--M_sp_11_1010_
+      |     |  |           +--| (99.5/1)
+      |     |  |           |  +--M_sp_32_1031_
+      |     |  |        +--| (99.1/1)
+      |     |  |        |  +--M_sp_25_1024
+      |     |  |     +--| (88.9/1)
+      |     |  |     |  |  +--M_sp_20_1019_
+      |     |  |     |  +--| (80.7/0.994)
+      |     |  |     |     +--M_sp_21_1020_
+      |     |  |  +--| (93.4/0.999)
+      |     |  |  |  +---Macrobrachium_veredensis_MN149329
+      |     |  +--| (91.4/0.997)
+      |     |     |     +--Macrobrachium_borellii_HM352426
+      |     |     +-----| (99.4/1)
+      |     |           |     +--------Macrobrachium_potiuna_JX466947
+      |     |           |  +--| (79.4/0.694)
+      |     |           |  |  +-------------Macrobrachium_nattereri_HM352428
+      |     |           +--| (37.6/0.38)
+      |     |              |  +-------Macrobrachium_iheringi_HM352432
+      |     |              +--| (79.2/0.709)
+      |     |                 |                    +----Macrobrachium_acanthurus_HM352445
+      |     |                 |                 +--| (28.9/0.697)
+      |     |                 |                 |  +---Macrobrachium_amazonicum_HM352441
+      |     |                 |              +--| (91.5/0.999)
+      |     |                 |              |  +---Macrobrachium_tenellum_OR690201
+      |     |                 |           +--| (61/0.742)
+      |     |                 |           |  +------------Macrobrachium_gallus_OR941622_
+      |     |                 |       +---| (96.1/1)
+      |     |                 |       |   |                 +--Macrobrachium_americanum_MZ678725
+      |     |                 |       |   |           +-----| (99.9/1)
+      |     |                 |       |   |           |     +--Macrobrachium_carcinus_HM352452
+      |     |                 |       |   |        +--| (86.8/0.991)
+      |     |                 |       |   |        |  |      +--Macrobrachium_crenulatum_HM352463
+      |     |                 |       |   |        |  |   +--| (83.1/0.976)
+      |     |                 |       |   |        |  |   |  |  +--Macrobrachium_digueti_KY111091
+      |     |                 |       |   |        |  |   |  +--| (96.1/1)
+      |     |                 |       |   |        |  |   |     +**Macrobrachium_hancocki_JQ805823
+      |     |                 |       |   |        |  +---| (96.7/1)
+      |     |                 |       |   |        |      |  +--Macrobrachium_denticulatum_HM352462
+      |     |                 |       |   |        |      +--| (63/0.843)
+      |     |                 |       |   |        |         |  +--Macrobrachium_olfersii_JQ805839
+      |     |                 |       |   |        |         +--| (85.1/0.984)
+      |     |                 |       |   |        |            +----Macrobrachium_faustinum_JQ805812
+      |     |                 |       |   |     +--| (84.7/0.923)
+      |     |                 |       |   |     |  +------Macrobrachium_heterochirus_KM101479
+      |     |                 |       |   |  +--| (18.5/0.537)
+      |     |                 |       |   |  |  |  +--Macrobrachium_caementarius_HM352453
+      |     |                 |       |   |  |  +--| (91.4/0.995)
+      |     |                 |       |   |  |     |  +--------Macrobrachium_inca_OR941678_
+      |     |                 |       |   |  |     +--| (95.6/1)
+      |     |                 |       |   |  |        +-----Macrobrachium_panamense_OR941680
+      |     |                 |       |   +--| (28.9/0.715)
+      |     |                 |       |      +------------Macrobrachium_rosenbergii_MK113948
+      |     |                 |    +--| (62.4/0.672)
+      |     |                 |    |  |  +---------------Macrobrachium_depressimanum_HM352435
+      |     |                 |    |  +--| (42.6/0.755)
+      |     |                 |    |     +-----------Macrobrachium_jelskii_KP054339
+      |     |                 +----| (95.6/1)
+      |     |                      |      +------Macrobrachium_aracamuni_HM352430
+      |     |                      |  +---| (96/1)
+      |     |                      |  |   |    +----Macrobrachium_ferreirai_HM352427
+      |     |                      |  |   +----| (96.2/1)
+      |     |                      |  |        +--Macrobrachium_inpa_HM352433
+      |     |                      +--| (0/0.337)
+      |     |                         |          +----------------------------Palaemon_ivonicus_KF923729
+      |     |                         |       +--| (0/0.424)
+      |     |                         |       |  |   +----------------Palaemon_argentinus_KP178997_1
+      |     |                         |       |  +---| (93.6/0.999)
+      |     |                         |       |      +--------------------Palaemon_northropi_HM352424
+      |     |                         +-------| (98.7/1)
+      |     |                                 +-----------------------------Palaemon_mercedae_KP178971
+      |  +--| (59.8/0.969)
+      |  |  +--M_sp_28_1027_
+      +--| (99.8/1)
+         +--M_sp_09_1008
+
+Tree in newick format:
+
+(M_sp_03_1002_:0.0000029833,(((((M_sp_16_1015_:0.0000029833,((M_sp_26_1025:0.0009240196,M_sp_24_1023_:0.0009251008)0/0.333:0.0000029833,(M_sp_35_1034:0.0009240103,M_sp_33_1032:0.0009199584)0/0.333:0.0000029833)0/0.333:0.0000029833)0/0.333:0.0000029833,M_sp_13_1012:0.0000029833)0/0.333:0.0000029833,(M_sp_22_1021:0.0000029833,M_sp_05_1004_:0.0000029833)0/0.333:0.0000029833)0/0.333:0.0000029833,M_sp_23_1022_:0.0000029833)0/0.333:0.0000029833,M_sp_34_1033_:0.0000029833)0/0.333:0.0000029833,(M_sp_08_1007_:0.0058521022,(M_sp_27_1026_:0.0009058277,(((Macrobrachium_brasiliense_MN149322:0.0651528444,(((((M_sp_11_1010_:0.0335433941,M_sp_32_1031_:0.0061408988)99.5/1:0.0291523210,M_sp_25_1024:0.0170170244)99.1/1:0.0332989663,(M_sp_20_1019_:0.0164978527,M_sp_21_1020_:0.0201885136)80.7/0.994:0.0182773882)88.9/1:0.0230387553,Macrobrachium_veredensis_MN149329:0.0665751334)93.4/0.999:0.0294174335,(Macrobrachium_borellii_HM352426:0.0552009388,((Macrobrachium_potiuna_JX466947:0.1401618535,Macrobrachium_nattereri_HM352428:0.2130738713)79.4/0.694:0.0306854422,(Macrobrachium_iheringi_HM352432:0.1275760168,((((((Macrobrachium_acanthurus_HM352445:0.0745847493,Macrobrachium_amazonicum_HM352441:0.0672153250)28.9/0.697:0.0218984902,Macrobrachium_tenellum_OR690201:0.0626754206)91.5/0.999:0.0473337639,Macrobrachium_gallus_OR941622_:0.1906420959)61/0.742:0.0202600962,(((((Macrobrachium_americanum_MZ678725:0.0153245379,Macrobrachium_carcinus_HM352452:0.0225284406)99.9/1:0.0966101075,((Macrobrachium_crenulatum_HM352463:0.0187039645,(Macrobrachium_digueti_KY111091:0.0083290086,Macrobrachium_hancocki_JQ805823:0.0000021748)96.1/1:0.0263860694)83.1/0.976:0.0189226149,(Macrobrachium_denticulatum_HM352462:0.0221795093,(Macrobrachium_olfersii_JQ805839:0.0210112123,Macrobrachium_faustinum_JQ805812:0.0741863539)85.1/0.984:0.0275719429)63/0.843:0.0236790751)96.7/1:0.0596173479)86.8/0.991:0.0311364405,Macrobrachium_heterochirus_KM101479:0.1020753871)84.7/0.923:0.0195843919,(Macrobrachium_caementarius_HM352453:0.0525684993,(Macrobrachium_inca_OR941678_:0.1306456367,Macrobrachium_panamense_OR941680:0.0959908293)95.6/1:0.0465553844)91.4/0.995:0.0337175313)18.5/0.537:0.0258727656,Macrobrachium_rosenbergii_MK113948:0.1893179905)28.9/0.715:0.0216322973)96.1/1:0.0625930437,(Macrobrachium_depressimanum_HM352435:0.2404895643,Macrobrachium_jelskii_KP054339:0.1790663312)42.6/0.755:0.0511394955)62.4/0.672:0.0191127818,((Macrobrachium_aracamuni_HM352430:0.1152060222,(Macrobrachium_ferreirai_HM352427:0.0825130621,Macrobrachium_inpa_HM352433:0.0471860375)96.2/1:0.0745956917)96/1:0.0639035040,((Palaemon_ivonicus_KF923729:0.4249200367,(Palaemon_argentinus_KP178997_1:0.2466706791,Palaemon_northropi_HM352424:0.3096914001)93.6/0.999:0.0699635643)0/0.424:0.0409169931,Palaemon_mercedae_KP178971:0.4347646202)98.7/1:0.1179133536)0/0.337:0.0031994651)95.6/1:0.0821375743)79.2/0.709:0.0239442900)37.6/0.38:0.0053551865)99.4/1:0.0922502054)91.4/0.997:0.0207970603)98.5/1:0.0326501802,M_sp_28_1027_:0.0014047498)59.8/0.969:0.0035611826,M_sp_09_1008:0.0093631916)99.8/1:0.0128880569)98.4/1:0.0057302780)0/0.333:0.0000029833);
+
+TIME STAMP
+----------
+
+Date and time: Fri Feb 28 02:10:48 2025
+Total CPU time used: 53.156 seconds (0h:0m:53s)
+Total wall-clock time used: 53.7397 seconds (0h:0m:53s)
+

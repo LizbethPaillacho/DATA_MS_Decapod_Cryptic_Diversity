@@ -1,0 +1,12 @@
+#nexus
+begin sets;
+  charset 16S = 1- 503;
+  charset COI1 = 506-1130\3;
+  charset COI2 = 504-1131\3;
+  charset COI3 = 505-1129\3;
+  charpartition mymodels =
+    TIM+F+G4: 16S,
+    TIM3e+I: COI1,
+    F81+F+I: COI2,
+    K3Pu+F+G4: COI3;
+end;

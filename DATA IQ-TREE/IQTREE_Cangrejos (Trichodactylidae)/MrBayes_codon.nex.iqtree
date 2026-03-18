@@ -1,0 +1,236 @@
+IQ-TREE 1.6.12 built Aug 15 2019
+
+Partition file name: PartitionFile_Trichodactylidae.txt
+Input file name: MrBayes_codon.nex
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 345915
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 26 taxa with 4 partitions and 1131 total sites (8.11739% missing data)
+
+  ID  Name  Type	Seq	Site	Unique	Infor	Invar	Const
+   1  16S   DNA	25	503	235	155	288	288
+   2  COI1  DNA	23	209	62	41	162	162
+   3  COI2  DNA	23	210	29	7	202	202
+   4  COI3  DNA	23	209	183	164	21	21
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM+F+G4:16S,TIM3e+I:COI1,F81+F+I:COI2,K3Pu+F+G4:COI3
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM+F+G4         -3164.5804   6345.1608 + 0.0000   6345.4523 + 0.0000   6378.9255 + 0.0000
+   2  TIM3e+I           -779.3219   1568.6437 + 0.0000   1568.9393 + 0.0000   1585.3554 + 0.0000
+   3  F81+F+I           -355.6230    721.2460 + 0.0000    721.5401 + 0.0000    737.9815 + 0.0000
+   4  K3Pu+F+G4        -2555.2234   5124.4469 + 0.0000   5125.0041 + 0.0000   5147.8432 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM+F+G4       0.5399  TIM{31.8652,6.66382,8.9949}+F{0.368769,0.0988675,0.183103,0.34926}+G4{0.270093}
+   2  TIM3e+I        0.2194  TIM3e{0.0120494,6.54889,20.4963}+FQ+I{0.718056}
+   3  F81+F+I        0.0276  F81+I{0.931444}
+   4  K3Pu+F+G4      3.8651  K3Pu{100,6.57573}+F{0.442592,0.134445,0.0377797,0.385184}+G4{1.27205}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -6832.9619 (s.e. 204.2002)
+Unconstrained log-likelihood (without tree): -4281.6253
+Number of free parameters (#branches + #model parameters): 73
+Akaike information criterion (AIC) score: 13811.9239
+Corrected Akaike information criterion (AICc) score: 13822.1452
+Bayesian information criterion (BIC) score: 14179.1765
+
+Total tree length (sum of branch lengths): 3.5030
+Sum of internal branch lengths: 1.4024 (40.0339% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0009) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Avotrichodactylus_constrictus_MG344668' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / aBayes support / ultrafast bootstrap support (%)
+
++-----------------------------------------------Avotrichodactylus_constrictus_MG344668
+|
+|                                 +------------------------Dilocarcinus_laevifrons_AY919093
+|                              +--| (27.6/0.362/42)
+|                              |  |    +---------Dilocarcinus_pagei_MG344658
+|                              |  +----| (87.1/0.979/92)
+|                              |       +--------Fredilocarcinus_apyratii_KJ132550
+|                       +------| (88.2/0.989/86)
+|                       |      +-----------------------Goyazana_castelnaui_MG344657
+|            +----------| (94.6/1/93)
+|            |          |                   +--Trichodactylidae_REEB_0504__reversed_
+|            |          |                +--| (78/0.869/88)
+|            |          |                |  +--Trichodactylidae_REEB_0539
+|            |          |     +----------| (99.4/1/100)
+|            |          |     |          +--Valdivia_serrata_KU578922
+|            |          |  +--| (66.6/0.537/36)
+|            |          |  |  |                           +**Trichodactylidae_REEB_0505__reversed_
+|            |          |  |  |                        +--| (89.4/1/99)
+|            |          |  |  |                        |  +**Trichodactylidae_REEB_0548__reversed_
+|            |          |  |  |                     +--| (87.2/0.964/89)
+|            |          |  |  |                     |  |  +**Trichodactylidae_REEB_0547__reversed_
+|            |          |  |  |                     |  +**| (0/0.333/52)
+|            |          |  |  |                     |     +**Trichodactylidae_REEB_0565__reversed_
+|            |          |  |  |                  +--| (74.7/0.963/80)
+|            |          |  |  |                  |  +--Trichodactylidae_REEB_0561__reversed_
+|            |          |  |  +------------------| (100/1/100)
+|            |          |  |                     +**Trichodactylidae_REEB_0541__reversed_
+|            |          +--| (72.7/0.909/38)
+|            |             |             +-------------Sylviocarcinus_pictus_KF688053
+|            |             +-------------| (98.9/1/99)
+|            |                           +-------------Sylviocarcinus_devillei_KF688091
++------------| (95.5/1/98)
+|            +----------------------------Trichodactylus_fluviatilis_KU984732
+|
+|                                +---------Trichodactylus_borellianus_MG344660
+|                     +----------| (98.6/1/100)
+|                     |          |             +--Trichodactylus_ehrhardti_MG344662
+|                     |          |  +----------| (99.6/1/100)
+|                     |          |  |          +--Trichodactylus_ehrhardti_MG344663
+|                     |          +--| (32.5/0.475/79)
+|                     |             +--------Trichodactylus_parvus_MG344661
+|       +-------------| (98.4/1/99)
+|       |             |                       +--Trichodactylus_kensleyi_MG344664
+|       |             |    +------------------| (100/1/100)
+|       |             |    |                  +--Trichodactylus_kensleyi_MG344665
+|       |             +----| (80.2/0.883/90)
+|       |                  |          +-----Trichodactylus_panoplus_KF688005
+|       |                  +----------| (99.3/1/100)
+|       |                             +--Trichodactylus_panoplus_MG344659
++-------| (87.4/0.926/94)
+        +----------------------------------------------Trichodactylus_faxoni_KF688028
+
+Tree in newick format:
+
+(Avotrichodactylus_constrictus_MG344668:0.3826461078,((((Dilocarcinus_laevifrons_AY919093:0.2052405649,(Dilocarcinus_pagei_MG344658:0.0859315131,Fredilocarcinus_apyratii_KJ132550:0.0758173541)87.1/0.979/92:0.0422448077)27.6/0.362/42:0.0081336468,Goyazana_castelnaui_MG344657:0.1946536215)88.2/0.989/86:0.0625674117,((((Trichodactylidae_REEB_0504__reversed_:0.0074804109,Trichodactylidae_REEB_0539:0.0056120242)78/0.869/88:0.0140299736,Valdivia_serrata_KU578922:0.0285302887)99.4/1/100:0.0910946432,((((Trichodactylidae_REEB_0505__reversed_:0.0000025369,Trichodactylidae_REEB_0548__reversed_:0.0000025369)89.4/1/99:0.0017470253,(Trichodactylidae_REEB_0547__reversed_:0.0000025380,Trichodactylidae_REEB_0565__reversed_:0.0000021227)0/0.333/52:0.0000028867)87.2/0.964/89:0.0025841806,Trichodactylidae_REEB_0561__reversed_:0.0047056922)74.7/0.963/80:0.0068117432,Trichodactylidae_REEB_0541__reversed_:0.0000025018)100/1/100:0.1565017856)66.6/0.537/36:0.0147712982,(Sylviocarcinus_pictus_KF688053:0.1128988029,Sylviocarcinus_devillei_KF688091:0.1180945207)98.9/1/99:0.1183727244)72.7/0.909/38:0.0226859183)94.6/1/93:0.0929081101,Trichodactylus_fluviatilis_KU984732:0.2321171608)95.5/1/98:0.1048298734,(((Trichodactylus_borellianus_MG344660:0.0856520293,((Trichodactylus_ehrhardti_MG344662:0.0085644320,Trichodactylus_ehrhardti_MG344663:0.0095573633)99.6/1/100:0.0887559894,Trichodactylus_parvus_MG344661:0.0724175031)32.5/0.475/79:0.0172758632)98.6/1/100:0.0936934281,((Trichodactylus_kensleyi_MG344664:0.0133915840,Trichodactylus_kensleyi_MG344665:0.0043846808)100/1/100:0.1510565325,(Trichodactylus_panoplus_KF688005:0.0489319235,Trichodactylus_panoplus_MG344659:0.0291434399)99.3/1/100:0.0927470905)80.2/0.883/90:0.0435494113)98.4/1/99:0.1110030775,Trichodactylus_faxoni_KF688028:0.3730595373)87.4/0.926/94:0.0667576266);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -6836.010247
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------------------------------------------Avotrichodactylus_constrictus_MG344668
+|
+|                                     +-----------------------Dilocarcinus_laevifrons_AY919093
+|                                  +--| (42)
+|                                  |  |    +---------Dilocarcinus_pagei_MG344658
+|                                  |  +----| (92)
+|                                  |       +-------Fredilocarcinus_apyratii_KJ132550
+|                         +--------| (86)
+|                         |        +----------------------Goyazana_castelnaui_MG344657
+|                      +--| (39)
+|                      |  |               +--Trichodactylidae_REEB_0504__reversed_
+|                      |  |            +--| (88)
+|                      |  |            |  +--Trichodactylidae_REEB_0539
+|                      |  |  +---------| (100)
+|                      |  |  |         +--Valdivia_serrata_KU578922
+|                      |  +--| (36)
+|                      |     |                          +--Trichodactylidae_REEB_0505__reversed_
+|                      |     |                       +--| (99)
+|                      |     |                       |  +--Trichodactylidae_REEB_0548__reversed_
+|                      |     |                    +--| (89)
+|                      |     |                    |  |  +--Trichodactylidae_REEB_0547__reversed_
+|                      |     |                    |  +--| (52)
+|                      |     |                    |     +--Trichodactylidae_REEB_0565__reversed_
+|                      |     |                 +--| (80)
+|                      |     |                 |  +--Trichodactylidae_REEB_0561__reversed_
+|                      |     +-----------------| (100)
+|                      |                       +--Trichodactylidae_REEB_0541__reversed_
+|           +----------| (93)
+|           |          |           +-----------Sylviocarcinus_pictus_KF688053
+|           |          +-----------| (99)
+|           |                      +------------Sylviocarcinus_devillei_KF688091
++-----------| (98)
+|           +-------------------------Trichodactylus_fluviatilis_KU984732
+|
+|                               +---------Trichodactylus_borellianus_MG344660
+|                    +----------| (100)
+|                    |          |            +--Trichodactylus_ehrhardti_MG344662
+|                    |          |  +---------| (100)
+|                    |          |  |         +--Trichodactylus_ehrhardti_MG344663
+|                    |          +--| (79)
+|                    |             +-------Trichodactylus_parvus_MG344661
+|       +------------| (99)
+|       |            |                    +--Trichodactylus_kensleyi_MG344664
+|       |            |   +----------------| (100)
+|       |            |   |                +--Trichodactylus_kensleyi_MG344665
+|       |            +---| (90)
+|       |                |         +----Trichodactylus_panoplus_KF688005
+|       |                +---------| (100)
+|       |                          +--Trichodactylus_panoplus_MG344659
++-------| (94)
+        +------------------------------------------Trichodactylus_faxoni_KF688028
+
+
+Consensus tree in newick format: 
+
+(Avotrichodactylus_constrictus_MG344668:0.3775597593,(((((Dilocarcinus_laevifrons_AY919093:0.2075810509,(Dilocarcinus_pagei_MG344658:0.0866691278,Fredilocarcinus_apyratii_KJ132550:0.0754135024)92:0.0432909459)42:0.0035529072,Goyazana_castelnaui_MG344657:0.1995891753)86:0.0788786784,(((Trichodactylidae_REEB_0504__reversed_:0.0075042769,Trichodactylidae_REEB_0539:0.0056404848)88:0.0142233281,Valdivia_serrata_KU578922:0.0284920633)100:0.0881757551,((((Trichodactylidae_REEB_0505__reversed_:0.0000027311,Trichodactylidae_REEB_0548__reversed_:0.0000027311)99:0.0017525748,(Trichodactylidae_REEB_0547__reversed_:0.0000027311,Trichodactylidae_REEB_0565__reversed_:0.0000027311)52:0.0000027311)89:0.0025950893,Trichodactylidae_REEB_0561__reversed_:0.0047212329)80:0.0068354020,Trichodactylidae_REEB_0541__reversed_:0.0000024219)100:0.1599635590)36:0.0190992799)39:0.0176900910,(Sylviocarcinus_pictus_KF688053:0.1110965731,Sylviocarcinus_devillei_KF688091:0.1190559766)99:0.1112304199)93:0.0998120498,Trichodactylus_fluviatilis_KU984732:0.2238559684)98:0.1061110135,(((Trichodactylus_borellianus_MG344660:0.0856328992,((Trichodactylus_ehrhardti_MG344662:0.0086173566,Trichodactylus_ehrhardti_MG344663:0.0095988043)100:0.0893924119,Trichodactylus_parvus_MG344661:0.0726099496)79:0.0182299105)100:0.0974492725,((Trichodactylus_kensleyi_MG344664:0.0134547347,Trichodactylus_kensleyi_MG344665:0.0043969782)100:0.1524206718,(Trichodactylus_panoplus_KF688005:0.0491995514,Trichodactylus_panoplus_MG344659:0.0293680363)100:0.0924852645)90:0.0408580085)99:0.1123672023,Trichodactylus_faxoni_KF688028:0.3765173663)94:0.0731003065);
+
+TIME STAMP
+----------
+
+Date and time: Thu Sep  4 21:12:22 2025
+Total CPU time used: 28.54 seconds (0h:0m:28s)
+Total wall-clock time used: 29.77672601 seconds (0h:0m:29s)
+
