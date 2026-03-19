@@ -1,17 +1,17 @@
->Descomprimir archivos
+>Decompress FASTQ files
 gunzip *gun
 
->Concatenar en formato fastq
+>Concatenate FASTQ files into a single file
 cat *fastq > B01.fastq
 
->Eliminar adaptadores
+>Remove adapter sequences
 porechop -i B01.fastq -o B01pore.fastq -t8 --dicard_middle 
 
->Aplicar filtros de calidad 
+>Apply quality and length filtering 
 NanoFilt -q 10 -l 600 B01pore.fastq > B01nano.fastq 
 
->Generar gráficos de calidad 
+>Generate quality control plots
 NanoPlot -t 1 --fastq B01nano.fastq --maxlength 1000 --plot kde
 
->Generación de una secuencia consenso
+>Generate consensus sequence using NGSpeciesID
 NGSpeciesID --ont --q 10 --consensus --medaka --fastq B01pore.fastq --outfolder B01_COI --m 700 --s 100 --remove_universal_tail
